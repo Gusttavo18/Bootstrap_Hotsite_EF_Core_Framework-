@@ -1,0 +1,192 @@
+﻿@model Interesse
+
+@* PRIMEIRA PARTE *@
+
+<div class="row mt-lg-5">
+    <div class="col-md-6">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p class="primertext mt-3">
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p class="primertext">
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="~/img/saude_medicina.jpg" alt="imagem medicina" width="500px" height="390px">
+    </div>
+</div>
+
+@* SEGUNDA PARTE *@
+<div class="row">
+    <div class="col-md-6 mt-4 border border-dark" id="form">
+        <h2>Entre em contato:</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+        @* FORMULÁRIO *@
+        <form method="POST" id="frmCadastro">
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Nome">Nome:</label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="Nome" id="nome" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Email">Email:</label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="Email" id="email" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Mensagem">Mensagem (opcional):</label>
+                </div>
+                <div class="col-md-9">
+                    <textarea asp-for="Mensagem" id="mensagem" style="width: 190px;"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="submit" value="Enviar" id="btnSubmit" class="mb-3 button" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6 mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="~/img/agenda_saude.png" class="image figure-img img-fluid rounded"
+                        alt="Agenda de eventos">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" class="links" data-toggle="modal" data-target="#AgendaDeEventos">
+                           <p class="txtlinks">Agenda de eventos</p>
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="~/img/dicas_saude.png" class="image figure-img img-fluid rounded"
+                        alt="Dicas de vida saudável">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#DicasSaudaveis">
+                          <p class="txtlinks">Dicas de vida saudável</p>  
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="~/img/apoiadores_saude.png" class="image figure-img img-fluid rounded" alt="Apoiadores">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#Apoiadores">
+                            <p class="txtlinks">Apoiadores</p> 
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal AGENDA DE EVENTOS -->
+<div class="modal fade" id="AgendaDeEventos" tabindex="-1" role="dialog" aria-labelledby="exampleAgendaDeEventos"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleAgendaDeEventos">Confira nosso eventos abaixo:</h5>
+            </div>
+            <div class="modal-body">
+                <h5 style="color: red;">Atenção as datas e as localizações!</h5>
+                <ul>
+                    <h6 style="color: royalblue;">Palestra:</h6>
+                    <li>Sobre a imoprtância de comer alimentos saudáveis
+                        <ul>Data: xx/yy/zz</ul>
+                        <ul>Localização: X </ul>
+                        <ul>Hora: XX:YY</ul>
+                    </li>
+                </ul>
+
+                <ul>
+                    <h6 style="color: royalblue;">Tira Dúvidas:</h6>
+                    <li>Benefícios X Malefícios da musculação
+                        <ul>Data: xx/yy/zz</ul>
+                        <ul>Localização: X </ul>
+                        <ul>Hora: XX:YY</ul>
+                    </li>
+                </ul>
+                <ul>
+                    <h6 style="color: royalblue;">Aulões:</h6>
+                    <li> Como funciona nosso metabolismo:
+                        <ul>Data: xx/yy/zz</ul>
+                        <ul>Localização: X </ul>
+                        <ul>Hora: XX:YY</ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal DICAS DE VIDA SAUDÁVEL-->
+<div class="modal fade" id="DicasSaudaveis" tabindex="-1" role="dialog" aria-labelledby="exampleDicasSaudaveis"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Dicas de vida saudável</h5>
+            </div>
+            <div class="modal-body">
+                <h5 style="color: sienna;">Top 5 dicas de como ter uma vida mais saudável.</h5>
+                <ul>
+                    <li>Uma vida saudável começa com a alimentação balanceada.</li>
+                </ul>
+
+                <ul>
+                    <li>Mantenha uma boa rotina de sono.</li>
+                </ul>
+                <ul>
+                    <li>Evite o sedentarismo.</li>
+                </ul>
+                 <ul>
+                    <li>Inclua alimentos detox na alimentação.</li>
+                </ul>
+                 <ul>
+                    <li>Beba muita água.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal APOIADORES-->
+<div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleApoiadores"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+            </div>
+            <div class="modal-body">
+                <h5>Empresas apoiadoras.</h5>
+                <p>Empresa X</p>
+                <p>Empresa Y</p>
+                <p>Empresa Z</p>
+                <p>Empresa XY</p>
+            </div>
+        </div>
+    </div>
+</div>

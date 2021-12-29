@@ -1,0 +1,17 @@
+.image{
+    display: flex;
+    width: 220px;
+    height: 210px;
+}
+.txtlinks{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+primertext{
+    font-size: 25px;
+}
+
+.button {
+    margin-left: 273px;
+}
